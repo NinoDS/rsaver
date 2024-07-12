@@ -1,7 +1,6 @@
 use std::collections::HashMap;
 use crate::domain::value::BasicValue;
-
-pub struct Id(pub usize);
+use crate::ir::Id;
 
 pub struct NodePoint {} // TODO
 

@@ -1,7 +1,7 @@
 use std::fmt::{Display, Formatter};
 use crate::domain::flat::FlatDomain;
 
-struct AST {}
+pub struct AST {}
 
 pub type FlatAST = FlatDomain<AST>;
 
