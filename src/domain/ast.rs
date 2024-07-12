@@ -3,7 +3,7 @@ use crate::domain::flat::FlatDomain;
 
 struct AST {}
 
-type FlatAST = FlatDomain<AST>;
+pub type FlatAST = FlatDomain<AST>;
 
 
 impl Display for FlatAST {

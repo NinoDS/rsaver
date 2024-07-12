@@ -1,7 +1,7 @@
 use std::fmt::{Display, Formatter};
 use crate::domain::flat::FlatDomain;
 
-type FlatInt = FlatDomain<i64>;
+pub type FlatInt = FlatDomain<i64>;
 
 impl Display for FlatInt {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
