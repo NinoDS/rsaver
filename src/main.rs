@@ -1,16 +1,7 @@
-use std::collections::HashSet;
-use crate::str::SetStr;
+use crate::domain::test;
 
-mod bool;
-mod int;
-mod absent;
-mod undef;
-mod null;
-mod str;
-mod bigint;
-mod num;
+mod domain;
 
 fn main() {
-    let mut s = SetStr::Top;
-    println!("{}", s);
+    println!("Hello, World!{}", test());
 }

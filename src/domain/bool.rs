@@ -1,10 +1,7 @@
 use std::fmt::{Display, Formatter};
+use crate::domain::flat::FlatDomain;
 
-enum FlatBool {
-    Top,
-    Base(bool),
-    Bot,
-}
+type FlatBool = FlatDomain<bool>;
 
 impl Display for FlatBool {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {

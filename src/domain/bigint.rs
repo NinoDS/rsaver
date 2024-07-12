@@ -1,10 +1,7 @@
 use std::fmt::{Display, Formatter};
+use crate::domain::flat::FlatDomain;
 
-enum FlatBigInt {
-    Top,
-    Base(i128), // :P
-    Bot,
-}
+type FlatBigInt = FlatDomain<i128>;
 
 impl Display for FlatBigInt {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {

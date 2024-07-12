@@ -23,7 +23,7 @@ impl Display for SetStr {
 
 impl SetStr {
     fn alpha(elems: HashSet<String>) -> Self {
-        if (elems.len() > MAX_SIZE) {
+        if elems.len() > MAX_SIZE {
             return Self::Top
         }
         Self::Base(elems)

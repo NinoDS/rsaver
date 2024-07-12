@@ -1,6 +1,6 @@
 use std::fmt::{Display, Formatter};
 
-enum UndefDomain {
+pub enum UndefDomain {
     Top,
     Bot
 }

@@ -1,15 +1,15 @@
 use std::fmt::{Display, Formatter};
 
-enum AbsentDomain {
+pub enum NullDomain {
     Top,
     Bot
 }
 
-impl Display for AbsentDomain {
+impl Display for NullDomain {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
         match self {
-            AbsentDomain::Top => write!(f, "absent"),
-            AbsentDomain::Bot => write!(f, "⊥"),
+            NullDomain::Top => write!(f, "null"),
+            NullDomain::Bot => write!(f, "⊥"),
         }
     }
 }
