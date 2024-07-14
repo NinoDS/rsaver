@@ -1,5 +1,9 @@
 use std::fmt::{Display, Formatter};
+use crate::domain::domain::Flat;
+use crate::domain::domain::Flat::{FlatBot, FlatElem};
 use crate::domain::undef::UndefDomain::{Bot, Top};
+
+struct Undef;
 
 #[derive(Copy, Clone)]
 pub enum UndefDomain {
@@ -40,6 +44,14 @@ impl UndefDomain {
         match (self, other) {
             (Bot, _) | (_, Top) => *self,
             (_, Bot) | (Top, _) => *other,
+        }
+    }
+
+    // get single value
+    fn get_single(&self) -> Flat<Undef> {
+        match self {
+            Bot => FlatBot,
+            Top => FlatElem(Undef)
         }
     }
 }

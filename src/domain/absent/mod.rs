@@ -1,5 +1,9 @@
 use std::fmt::{Display, Formatter};
 use crate::domain::absent::AbsentDomain::{Bot, Top};
+use crate::domain::domain::Flat;
+use crate::domain::domain::Flat::{FlatBot, FlatElem};
+
+struct Absent;
 
 #[derive(Copy, Clone)]
 pub enum AbsentDomain {
@@ -38,6 +42,14 @@ impl AbsentDomain {
         match (self, other) {
             (Bot, _) | (_, Top) => *self,
             (_, Bot) | (Top, _) => *other,
+        }
+    }
+
+    // get single value
+    fn get_single(&self) -> Flat<Absent> {
+        match self {
+            Bot => FlatBot,
+            Top => FlatElem(Absent)
         }
     }
 }
